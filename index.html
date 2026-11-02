@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI/UX Designer Portfolio — Artemiy Balitskiy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. Header/Nav Component -->
+  <header class="header">
+    <div class="header-container">
+      <a href="#" class="logo">AB.</a>
+      
+      <!-- Native CSS Burger Toggle -->
+      <input type="checkbox" id="burger-toggle" class="burger-checkbox">
+      <label for="burger-toggle" class="burger-label" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#cases" class="nav-link">Cases</a></li>
+          <li><a href="#about" class="nav-link">About Me</a></li>
+          <li><a href="#prices" class="nav-link">Prices</a></li>
+          <li><a href="#contacts" class="nav-link">Contacts</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. Hero Section Component -->
+    <section class="hero" id="about">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">Crafting Intuitive Digital Products & Seamless UI/UX Solutions</h1>
+          <p class="hero-description">I am Artemiy Balitskiy, a UI/UX Designer specializing in scalable web systems, interactive mobile interfaces, and digital product strategy.</p>
+          <div class="hero-cta-wrapper">
+            <a href="#cases" class="btn btn-primary">View Cases</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="images/74d99ba46faa2efe99524c090464b9e8e1b1a5c6.jpg" alt="Artemiy Balitskiy - UI/UX Designer" class="hero-photo" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Grid Section Component -->
+    <section class="cases" id="cases">
+      <div class="section-container">
+        <h2 class="section-title">Selected Projects</h2>
+        
+        <div class="grid-matrix">
+          <!-- Case 1 -->
+          <article class="case-card">
+            <div class="card-media">
+              <img src="images/e27337806007a09966ae40a4f2064389bcd39dbb.jpg" alt="Fintech Dashboard Design" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="tag">Fintech App</span>
+              <h3 class="card-title">Banking & Analytics Ecosystem</h3>
+              <p class="card-desc">Complete redesign of web and mobile dashboards for personal finance management.</p>
+              <a href="#" class="card-link">View Case Study &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Case 2 -->
+          <article class="case-card">
+            <div class="card-media">
+              <img src="images/b15f16c2122b52d691d09aa4d598277bd4bbd60c.jpg" alt="E-Commerce Mobile Application" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="tag">E-Commerce</span>
+              <h3 class="card-title">Lumina Concept Store</h3>
+              <p class="card-desc">Mobile-first shopping experience optimized for ergonomic thumb-zone controls.</p>
+              <a href="#" class="card-link">View Case Study &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Case 3 -->
+          <article class="case-card">
+            <div class="card-media">
+              <img src="images/99a0de3d17b3ca678c91ddf7d754588673b6fc37.jpg" alt="Real Estate Data Platform" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="tag">PropTech</span>
+              <h3 class="card-title">Property Search Assistant</h3>
+              <p class="card-desc">Analytical dashboard and property listings search engine UI design.</p>
+              <a href="#" class="card-link">View Case Study &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Prices -->
+    <section class="prices" id="prices">
+      <div class="section-container">
+        <h2 class="section-title">Service Pricing</h2>
+        <div class="prices-grid">
+          <div class="price-card">
+            <h3>UI/UX Audit</h3>
+            <p class="price-amount">$300</p>
+            <p class="price-desc">Comprehensive UX research, usability analysis, and accessibility report.</p>
+          </div>
+          <div class="price-card featured">
+            <h3>Landing Page / Portfolio</h3>
+            <p class="price-amount">$800</p>
+            <p class="price-desc">Adaptive layout in Figma, WCAG multi-theme design, and design system.</p>
+          </div>
+          <div class="price-card">
+            <h3>Complex Web / Mobile App</h3>
+            <p class="price-amount">$2,000+</p>
+            <p class="price-desc">Full lifecycle product design from wireframes to developer handoff.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Feedback Form Component -->
+    <section class="feedback" id="contacts">
+      <div class="section-container">
+        <div class="feedback-card">
+          <h2 class="section-title">Initiate a Project</h2>
+          <p class="feedback-subtitle">Fill out the form below to submit your commercial request or technical specifications.</p>
+          
+          <form class="feedback-form" action="#" method="POST">
+            <div class="form-group">
+              <label for="user-name">Full Name *</label>
+              <input type="text" id="user-name" name="name" class="form-input" placeholder="Artemiy Balitskiy" required>
+            </div>
+
+            <div class="form-group">
+              <label for="user-email">Email Address *</label>
+              <input type="email" id="user-email" name="email" class="form-input" placeholder="artemiy@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="user-tz">Link to Technical Specifications (TZ) *</label>
+              <input type="url" id="user-tz" name="tz_link" class="form-input" placeholder="https://docs.google.com/document/d/..." required>
+            </div>
+
+            <button type="submit" class="btn btn-submit">Submit Commercial Request</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 5. Footer Component -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#" class="logo">AB.</a>
+        <p class="copyright">&copy; 2026 Artemiy Balitskiy. All rights reserved.</p>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="social-link">Behance</a>
+        <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="social-link">Dribbble</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
+      </div>
+
+      <!-- Theme Switcher Toggle (Light / Dark) -->
+      <div class="theme-switcher">
+        <input type="checkbox" id="theme-toggle" class="theme-checkbox">
+        <label for="theme-toggle" class="theme-label">
+          <span class="theme-icon light-icon">☀️</span>
+          <span class="theme-icon dark-icon">🌙</span>
+        </label>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
