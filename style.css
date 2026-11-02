@@ -1,9 +1,5 @@
-/* ==========================================================================
-   CSS RESET & VARIABLES (Pure CSS Multi-theming using :has() & CSS Variables)
-   ========================================================================== */
 
 :root {
-  /* Default Light Theme Tokens */
   --bg-color: #FAFAFC;
   --surface-color: #FFFFFF;
   --surface-border: #E5E7EB;
@@ -21,7 +17,6 @@
   --transition-speed: 0.3s;
 }
 
-/* Dark Theme Triggered via Theme Toggle Checkbox */
 body:has(#theme-toggle:checked) {
   --bg-color: #0F172A;
   --surface-color: #1E293B;
@@ -44,7 +39,7 @@ body:has(#theme-toggle:checked) {
 }
 
 html {
-  font-size: 100%; /* 1rem = 16px default */
+  font-size: 100%; 
   scroll-behavior: smooth;
 }
 
@@ -68,9 +63,6 @@ a {
   text-decoration: none;
 }
 
-/* ==========================================================================
-   LAYOUT CONTAINERS (Flexbox & CSS Grid)
-   ========================================================================== */
 
 .header-container,
 .hero-container,
@@ -81,9 +73,6 @@ a {
   margin: 0 auto;
 }
 
-/* ==========================================================================
-   1. HEADER / NAV COMPONENT
-   ========================================================================== */
 
 .header {
   position: sticky;
@@ -131,7 +120,6 @@ a {
   transition: transform var(--transition-speed) ease, opacity var(--transition-speed) ease;
 }
 
-/* Mobile Drawer Nav */
 .nav {
   position: fixed;
   top: 0;
@@ -164,7 +152,6 @@ a {
   color: var(--primary-color);
 }
 
-/* Burger Animation & Menu Open Toggle */
 #burger-toggle:checked ~ .nav {
   right: 0;
 }
@@ -181,9 +168,6 @@ a {
   transform: translateY(-0.53125rem) rotate(-45deg);
 }
 
-/* ==========================================================================
-   2. HERO SECTION COMPONENT (Mobile-First Ergonomics / Thumb Zone)
-   ========================================================================== */
 
 .hero {
   padding: 3rem 0 4rem;
@@ -215,7 +199,6 @@ a {
   color: var(--text-muted);
 }
 
-/* Mobile Thumb Zone Integration for Primary CTA */
 .hero-cta-wrapper {
   margin-top: 1rem;
   display: flex;
@@ -232,7 +215,7 @@ a {
   cursor: pointer;
   border: none;
   transition: background-color var(--transition-speed) ease, transform 0.2s ease;
-  width: 100%; /* Ergonomic full width on mobile thumb zone */
+  width: 100%; 
 }
 
 .btn-primary, .btn-submit {
@@ -258,9 +241,6 @@ a {
   border: 0.125rem solid var(--surface-border);
 }
 
-/* ==========================================================================
-   3. GRID SECTION COMPONENT (Responsive Matrix)
-   ========================================================================== */
 
 .cases, .prices, .feedback {
   padding: 4rem 0;
@@ -273,7 +253,6 @@ a {
   text-align: center;
 }
 
-/* CSS Grid 1-column mobile -> Multi-column desktop */
 .grid-matrix {
   display: grid;
   grid-template-columns: 1fr;
@@ -333,7 +312,6 @@ a {
   margin-top: 0.5rem;
 }
 
-/* Prices Component */
 .prices-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -361,9 +339,6 @@ a {
   color: var(--primary-color);
 }
 
-/* ==========================================================================
-   4. FEEDBACK FORM COMPONENT (Pure CSS Native Input Validation)
-   ========================================================================== */
 
 .feedback-card {
   background-color: var(--surface-color);
@@ -411,23 +386,19 @@ a {
   transition: border-color var(--transition-speed) ease;
 }
 
-/* Pure CSS Input State Validation */
 .form-input:focus {
   outline: none;
   border-color: var(--primary-color);
 }
 
 .form-input:required:invalid:not(:placeholder-shown) {
-  border-color: #EF4444; /* Red border for invalid entries */
+  border-color: #EF4444; 
 }
 
 .form-input:required:valid {
-  border-color: #10B981; /* Green border for valid entries */
+  border-color: #10B981; 
 }
 
-/* ==========================================================================
-   5. FOOTER COMPONENT
-   ========================================================================== */
 
 .footer {
   border-top: 0.0625rem solid var(--surface-border);
@@ -464,7 +435,6 @@ a {
   color: var(--primary-color);
 }
 
-/* Pure CSS Theme Switcher Controls */
 .theme-checkbox {
   display: none;
 }
@@ -504,13 +474,10 @@ a {
   transform: translateX(1.5rem);
 }
 
-/* ==========================================================================
-   CROSS-BROWSER RESPONSIVENESS (@media min-width: 1024px)
-   ========================================================================== */
 
-@media (min-width: 64rem) { /* 1024px Desktop Resolution */
+@media (min-width: 64rem) {
   .burger-label {
-    display: none; /* Hide burger on desktop */
+    display: none; 
   }
 
   .nav {
@@ -546,11 +513,11 @@ a {
   }
 
   .btn {
-    width: auto; /* Standard CTA button on desktop */
+    width: auto;
   }
 
   .grid-matrix {
-    grid-template-columns: repeat(2, 1fr); /* 2-column matrix on desktop */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 2.5rem;
   }
 
